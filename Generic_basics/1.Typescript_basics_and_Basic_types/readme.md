@@ -19,6 +19,7 @@ Core Types
 - Important: It is string and number (etc.), NOT String, Number etc.
 - The core primitive types in TypeScript are all lowercase!
 
+
 ## Nested Objects & Types
 Of course object types can also be created for nested objects.
 
@@ -47,6 +48,7 @@ This would be the type of such an object:
 }
 ```
 So you have an object type in an object type so to say.
+
 
 ## Type Aliases & Object Types
 Type aliases can be used to "create" your own types. You're not limited to storing union types though - you can also provide an alias to a (possibly complex) object type.
@@ -80,3 +82,63 @@ To:
       return checkAge > user.age;
     }
 ```
+
+
+## Typescript có 3 loại types chính đó là ( Xem cách sử dụng Type and Interface )
+- Any type
+- Built in type
+- User defined type
+
+Interface và Type thuộc loại thứ 3 - User defined type.
+
+1. Declaration
+Type 
+```typescript
+type Shape = {
+  name: string;
+  color: string;
+};
+```
+Interface
+```typescript
+interface Shape {
+   name: string;
+  color: string;
+}
+```
+
+2. Interface có thể merge còn Type thì không
+Trong cùng 1 file chúng ta khai báo như sau
+```typescript
+interface Shape {
+   name: string;
+}
+
+interface Shape {
+  color:string;
+}
+
+const Circle:Shape = {
+  name:'circle',
+  color:'blue'
+}
+```
+
+Mọi thì đều ổn,còn với Type thì sao
+```typescript
+type Shape {
+   name: string;
+}
+
+type Shape {
+  color:string;
+}
+
+const Circle:Shape = {
+  name:'circle',
+  color:'blue'
+}
+```
+Ở đây chúng ta sẽ nhận được lỗi : "Duplicate identifier 'Shape."
+
+[Readmore...](https://viblo.asia/p/type-vs-interface-trong-typescript-gGJ599Gp5X2)
