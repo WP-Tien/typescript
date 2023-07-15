@@ -1,7 +1,8 @@
-const person: {
+// const person : object = {} // Object type
+const person: { // Explicit type
     name: string,
     age: number
-} = {
+} = { // Create a Object
     name: 'Vincent',
     age: 30
 }
