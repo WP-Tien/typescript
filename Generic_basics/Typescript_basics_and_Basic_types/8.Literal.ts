@@ -1,7 +1,7 @@
 function combine (
     input1: number | string,
     input2: number | string, 
-    resultConversion: 'as-number' | 'as-text'
+    resultConversion: 'as-number' | 'as-text' // <== Literal and Union
 ) {
     let result;
 

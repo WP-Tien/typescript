@@ -2,7 +2,7 @@ const person: {
     name: string;
     age: number;
     hobbies: string[]; // string array
-    role: [number, string] // tuple: fixed length so i can't assign role[1] = 10
+    role: [number, string] // tuple type: fixed length so i can't assign role[1] = 10
 } = {
     name: 'Vincent',
     age: 30,
