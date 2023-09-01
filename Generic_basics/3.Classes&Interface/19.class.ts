@@ -6,7 +6,7 @@ class Department {
     }
 
     describe() {
-        console.log( 'Department: ' + this.name);
+        console.log('Department: ' + this.name);
     }
 }
 

@@ -6,9 +6,9 @@ const person: { // Explicit type
     name: 'Vincent',
     age: 30
 }
-console.log( person.name );
+console.log(person.name);
 
-const product : {
+const product: {
     id: string,
     price: number,
     tags: string[],
@@ -25,4 +25,4 @@ const product : {
         description: 'A great carpet - almost brand-new!'
     }
 }
-console.log( product.id );
+console.log(product.id);
